@@ -12,7 +12,7 @@
   <body>
 <div Class="container">
 <div class="title"  style="background-image: url(images/hero-bg.png);">Registration Form</div>  
-<form action="checkRegistration.php" method="POST">
+<form action="checkRegistration.php" method="POST" enctype="multipart/form-data">
   <div class="content">
     <div class="input-box">
       <label>Full Name:</label>
@@ -74,9 +74,8 @@
       </div>
       <div>
       	<label>Profile Photo</label>
-      	<input class="file-upload-input"type="file" onchange="readURL(this)" accept="image/*" name="pic"id="pic">
-        
-      </div>
+      	<input class="file-upload-input" capture="camera" type="file" onchange="readURL(this)" accept="image/*" onclick= chooseFile() name="pic"id="pic" >
+       </div>
       <div class="button-container">
       	<button type="submit">Register</button>
       <i><H3 id="errmsg" style="color: rgb(90, 35, 35);"></H3></i>

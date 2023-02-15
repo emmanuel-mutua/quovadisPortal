@@ -1,8 +1,7 @@
 <?php
-    session_start();
+     session_start();
     if(!isset($_SESSION["uname"])) {
         header("Location: index.html");
         exit();
     }
 ?>
-<?php 

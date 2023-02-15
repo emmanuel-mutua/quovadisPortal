@@ -9,11 +9,23 @@
 <!--fav-icon-->
 <link rel="shortcut icon" href="images/Log 1.png"/>
 <link rel="stylesheet" href="css/fullstyle.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./css/loading.css">
+
 <style>
 
 </style>
 </head>
-
+<div id="loading-page">
+    <div class="loading-icon">
+      <i class="fa fa-spinner fa-spin"></i>
+    </div>
+  </div>
+  <script>
+    setTimeout(function(){
+      document.getElementById("loading-page").style.display = "none";
+    }, 1000); // 2 seconds
+  </script>
 <body id="main-body">
     
     <section class="main" style="background-image: url(images/hero-bg.png);">
@@ -53,7 +65,7 @@
                 <input type="text" placeholder="Enter Username" name="uname" required>
           
                 <label for="psw"><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="psw" required>
+                <input type="password" placeholder="Enter Password" name="pssw" required>
                   
                 <button type="submit">Login</button>
                 <label>
