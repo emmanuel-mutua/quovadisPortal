@@ -1,7 +1,11 @@
+*{
+    scroll-behavior: smooth;
+}
 body{
     margin:0px;
     padding: 0px;
     font-family: calibri;
+    scroll-behavior: smooth;
 }
 *{
     box-sizing: border-box;

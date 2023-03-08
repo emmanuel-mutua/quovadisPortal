@@ -61,8 +61,9 @@ include("auth_session.php");
             </label>
             <ul class="menu" style="border-radius: 5px;">
                 <li><a href="https://quovadisyouthhub.org">About</a></li>
-                <li><a href="#">Chat</a></li>
-                <li><a href="#">My Profile</a></li>
+                <li><a href="#services">services</a></li>
+                <li><a href="./chatsystem/user/index.php">Chat</a></li>
+                <li><a href="./userProfile.php">My Profile</a></li>
                 <li><a href="#">Available Jobs</a></li>
                 <li><a href="#">Career Guidance</a></li>
                 <li><a class="active" href = "./index.html" >Log Out</a></li>
@@ -74,7 +75,7 @@ include("auth_session.php");
             
             <!--text-->
             <div class="home-text" >
-            <h1 style="color: orange; font-size: 50px"><h1 style="color: orange; font-size: 50px">Hi, <?php echo $_SESSION['uname']; ?>!</h1></h1>
+            <h1 style="color: orange; font-size: 50px"><h1 style="color: orange; font-size: 50px">Hi, <?php echo $user?>!</h1></h1>
                 <h3 style="color: white; letter-spacing: 3px;">Welcome to Quo Vadis Youth Hub</h3>
                 <h1 style="color: white;"> ONLINE PORTAL</h1>
                 <p style="color: white;">The main aim is to capture the details of the Young people in an aid of capturing the progress and know their status in the Job Market. The job placement department will work to link the Young people with the Job market accross the Country. We will also lias with the Employers to give them young people best suited for the job vacance they have.</p>
@@ -102,56 +103,24 @@ include("auth_session.php");
     </section>
     
     <!--services----------------------->
-    <section class="services">
-        <!--heading----------->
-        <div class="services-heading">
-            <h2>OUR PROFESSIONAL SERVICES</h2>
-            <p>We mentor young people on career choices and give them a shouulder to lean on when searching for their dream job</p>
-        </div>
-        <!--box-container----------------->
-        <div class="box-container">
-            <!--box-1-------->
-            <div class="box">
-                <img src="images/cv.png">
-                <font>CV Writing Training</font>
-                <p>We give young people out of school or in their final year training on how best to write their CV and present it best to potential employers</p>
-                <!--btn--------->
-                <a href="#">Take the course today</a>
-            </div>
-            <!--box-2-------->
-            <div class="box">
-                <img src="images/link.png">
-                <font>Link Job Seekers with Employers</font>
-                <p>We link those who are seeking for a job with potential employers. You only need to give us your details to link you with best suit career job.</p>
-                <!--btn--------->
-                <a href="#">Lets connect</a>
-            </div>
-            <!--box-3-------->
-            <div class="box">
-                <img src="images/dig.png">
-                <font>Digital trainings</font>
-                <p>We train you on how to apply for online jobs and present your skills to potential employers. We also orient you to digital world</p>
-                <!--btn--------->
-                <a href="#">Learn more</a>
-            </div>
-            <!--box-4-------->
-            <div class="box">
-                <img src="images/career.png">
-                <font>Career day</font>
-          
-                <p>We host career day for the form four leavers where they learn on how best to choose their courses.</p>
-                <!--btn--------->
-                <a href="#">Apply Now</a>
-            </div>
-            <!--box-1-------->
-            
-        </div>
+    <section class="services" id = "services" >
+        <script>
+            fetch("index.html")
+  .then(response => response.text())
+  .then(html => {
+    const doc = new DOMParser().parseFromString(html, "text/html");
+    const div1 = doc.querySelector("#services");
+    // ... insert the content of services into your dashboard.php file
+    const newDiv = document.createElement("div");
+newDiv.innerHTML = div1.innerHTML;
+document.body.appendChild(newDiv);
+  });
+        </script>
+    
+    
     </section>
     
-    <!--footer------------->
-    <footer>
-        <p>Copyright (C) - 2023 | Developed By <a href="https://kush.lexdigital.in/">QUO VADIS YOUTH HUB </a> </p>
-    </footer>
+   
     <script>
         // Get the modal
         var modal = document.getElementById('id01');

@@ -9,16 +9,20 @@ body {
   
   /* Style form container */
   .container {
-    background-color: #2384e5; /* set background of form to blue */
+    background-color: #fefefe; /* set background of form to blue */
     max-width: 500px;
     padding: 40px;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px #ccc;
+    border: #271111 1px solid;
   }
+  label {
+    display: inline-block;
+    margin-right: 10px;
+}
   
   /* Style form elements */
   .title {
-    color: #fff;
+    color: #271111;
     font-size: 24px;
     text-align: center;
     margin-bottom: 20px;
@@ -30,8 +34,8 @@ body {
   
   .input-box {
     margin-bottom: 20px;
-    
   }
+  
   
   .input-box label {
     display: block;
@@ -41,7 +45,7 @@ body {
   
   .input-box input,
   .input-box textarea {
-    background-color: rgb(248, 231, 231);
+    background-color: rgb(232, 228, 228);
     border: none;
     border-radius: 5px;
     padding: 10px;
@@ -64,13 +68,14 @@ body {
     background-color: #5b1928; /* set button color */
     border: none;
     border-radius: 5px;
-    color: #fff;
+    color: #dcdada;
     padding: 10px 20px;
     font-size: 18px;
   }
   
   button[type="submit"]:hover {
-    background-color: #dbe4db;
+    background-color: #f75733;
+    color: white;
   }
   
   /* Media queries for smaller screens */
