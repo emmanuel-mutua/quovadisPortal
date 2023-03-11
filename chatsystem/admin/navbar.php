@@ -7,6 +7,7 @@
 		<ul class="nav navbar-nav">
 			<li><a href="index.php"><span class="glyphicon glyphicon-list"></span> Chat Rooms</a></li>
 			<li><a href="user.php"><span class="glyphicon glyphicon-user"></span> Users</a></li>
+			<li><a href="#"><span class="glyphicon glyphicon-job"></span> Post Jobs</a></li>
 		</ul>
 
 		<ul class="nav navbar-nav navbar-right">

@@ -1,21 +1,17 @@
 <?php
-	include('session.php');
-	if(isset($_POST['edit'])){
-		$id=$_POST['id'];
-		$name=$_POST['name'];
-		$username=$_POST['username'];
-		$password=$_POST['password'];
-		
-		$uq=mysqli_query($conn,"select * from `user` where userid='$id'");
-		$uqrow=mysqli_fetch_array($uq);
-		
-		if ($password==$uqrow['password']){
-			$newpassword=$password;
-		}
-		else{
-			$newpassword=md5($password);
-		}
-		mysqli_query($conn,"update `user` set uname='$name', username='$username', password='$newpassword' where userid='$id'");
-	}
+    include('session.php');
+    if(isset($_POST['edit'])){
+        $id = $_POST['id'];
+        $fname = $_POST['fname'];
+        $lname = $_POST['lname'];
+        $institution = $_POST['institution'];
+        $phonenumber = $_POST['phonenumber'];
+        $password = $_POST['password'];
 
+        // Update user information in the database
+        $query = "UPDATE `user` SET FirstName='$fname', LastName='$lname', Institution='$institution', PhoneNumber='$phonenumber', Password='$password' WHERE UserID='$id'";
+        mysqli_query($conn, $query);
+    }
+	print_r($_POST);
 ?>
+

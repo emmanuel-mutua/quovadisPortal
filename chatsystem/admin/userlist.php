@@ -14,7 +14,9 @@
 				<th>IDNO</th>
 				<th>Institution</th>
 				<th>DateOfBirth</th>
+				<th>Gender</th>
 				<th>HomeCounty</th>
+				<th>PhoneNumber</th>
 				<th>PassWord</th>
 				<th>Photo</th>
 				<th>Access</th>
@@ -25,7 +27,7 @@
 		<?php
 			$query=mysqli_query($conn,"select * from `user` order by FirstName asc");
 			while($row=mysqli_fetch_array($query)){
-				
+				$photo = $row['photo'];	
 			?>
 			<tr>
 				
@@ -34,9 +36,11 @@
 				<td><input type="hidden" id="IdNo<?php echo $row['userid']; ?>" value="<?php echo $row['IdNo']; ?>"><?php echo $row['IdNo']; ?></td>
 				<td><input type="hidden" id="Institution<?php echo $row['userid']; ?>" value="<?php echo $row['Institution']; ?>"><?php echo $row['Institution']; ?></td>
 				<td><input type="hidden" id="DateOfBirth<?php echo $row['userid']; ?>" value="<?php echo $row['DateOfBirth']; ?>"><?php echo $row['DateOfBirth']; ?></td>
+				<td><input type="hidden" id="Gender<?php echo $row['userid']; ?>" value="<?php echo $row['Gender']; ?>"><?php echo $row['Gender']; ?></td>
 				<td><input type="hidden" id="HomeCounty<?php echo $row['userid']; ?>" value="<?php echo $row['HomeCounty']; ?>"><?php echo $row['HomeCounty']; ?></td>
+				<td><input type="hidden" id="PhoneNumber<?php echo $row['userid']; ?>" value="<?php echo $row['PhoneNumber']; ?>"><?php echo $row['PhoneNumber']; ?></td>
 				<td><input type="hidden" id="password<?php echo $row['userid']; ?>" value="<?php echo $row['password']; ?>"><?php echo $row['password']; ?></td>
-				<td><img src="../<?php if(empty($row['photo'])){echo "upload/profile.jpg";}else{echo $row['photo'];} ?>" height="30px;" width="30px;"></td>
+				<td><img src="../<?php if(empty($row['photo'])){echo "upload/profile.jpg";}else{echo "<Img src =../../profileImg/$photo>";} ?>" height="30px;" width="30px;"></td>
 				<td>
 					<?php 
 						if ($row['access']==1){

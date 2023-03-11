@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<?php
-include("./userdata/userdetails.php");
-?>
 
+<?php
+include("./conn.php");
+			$query=mysqli_query($conn,"select * from `user` order by FirstName asc");
+			while($row=mysqli_fetch_array($query)){
+				$photo = $row['photo'];	
+        echo $row['FirstName'];
+      }
+			?>
 
 
 <head>
@@ -39,26 +44,14 @@ include("./userdata/userdetails.php");
   <div class="personal-info">
     <h2>Basic Information</h2>
 
-    <img src="profileImg/<?php echo $picture;?>" alt="CV">
-    <ul>
-      <li><strong>Name:  </strong> <?php echo $fullname; ?> </li>
-      <li><strong>Gender:  </strong>  <?php echo $gender; ?></li>
-      <li><strong>Status: </strong>  <?php echo $status; ?></li>
-      <li><strong>Email: </strong>  <?php echo $email; ?></li>
-      <li><strong>Phone: </strong>  <?php echo $phone; ?></li>
-    </ul>
+    <img src="profileImg/<?php echo $photo;?>" alt="CV">
+   
   </div>
   
   <div class="other-info">
     <h2>Additional Information</h2>
     <ul>
-   
-      <li><strong>Home Diocese:</strong>  <?php echo $diocese; ?></li>
-      <li><strong>Home Parish:</strong>  <?php echo $parish; ?></li>
-      <li><strong>Highschool:</strong>  <?php echo  $high_school; ?></li>
-      <li><strong>Institution(college):</strong>  <?php echo $college; ?></li>
-      <li><strong>KCSE:</strong>  <?php echo $kcse; ?></li>
-      <li><strong>KCSE:</strong>  <?php echo  $kcsegrade; ?></li>
+
      
     
     </ul>
