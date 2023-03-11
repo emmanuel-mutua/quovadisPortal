@@ -9,4 +9,6 @@ include("./conn.php");
 	$srow=mysqli_fetch_array($sq);
 	
 	$user=$srow['FirstName'];
+    $_SESSION["user"] = $user;
+    
 ?>
