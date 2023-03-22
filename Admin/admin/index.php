@@ -2,11 +2,6 @@
 <?php include('header.php'); ?>
 <body>
 <?php include('navbar.php'); ?>
-<div class="container">
-	<div class="row">
-		<?php include('chatlist.php'); ?>
-	</div>
-</div>
 <?php include('crudroom_modal.php'); ?>
 <?php include('modal.php'); ?>
 

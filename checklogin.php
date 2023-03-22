@@ -35,7 +35,7 @@
 				?>
 				<script>
 					window.alert('Login Success, Welcome Admin!');
-					window.location.href='./chatsystem/admin/index.php';
+					window.location.href='./Admin/admin/index.php';
 				</script>
 				<?php
 			}

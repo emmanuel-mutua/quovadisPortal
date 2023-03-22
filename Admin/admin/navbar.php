@@ -1,11 +1,6 @@
 <nav class="navbar navbar-default">
     <div class="container-fluid">
-		<div class="navbar-header">
-			<a class="navbar-brand" href="#">Admin Portal</a>
-		</div>
-
 		<ul class="nav navbar-nav">
-			<li><a href="index.php"><span class="glyphicon glyphicon-list"></span> Chat Rooms</a></li>
 			<li><a href="user.php"><span class="glyphicon glyphicon-user"></span> Users</a></li>
 			<li><a href="#"><span class="glyphicon glyphicon-job"></span> Post Jobs</a></li>
 		</ul>
