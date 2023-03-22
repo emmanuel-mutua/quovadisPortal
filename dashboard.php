@@ -65,6 +65,7 @@ include("auth_session.php");
                 <li><a href="./userProfile.php">My Profile</a></li>
                 <li><a href="#">Available Jobs</a></li>
                 <li><a href="#">Career Guidance</a></li>
+                <li><a target="_blank" href="https://youthportal.tawk.help/">Help</a></li>
                 <li><a class="active" href = "./index.html" >Log Out</a></li>
             </ul>
         </nav>
