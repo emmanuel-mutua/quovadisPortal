@@ -1,5 +1,5 @@
 <?php
-	include('conn.php');
+	include('db.php');
 	session_start();
 	function check_input($data) {
 		$data = trim($data);
@@ -41,12 +41,7 @@
 			}
 			else{
 				$_SESSION['id']=$row['userid'];
-				?>
-				<script>
-					window.alert('Login Success, Welcome User!');
-					window.location.href='./dashboard.php';
-				</script>
-				<?php
+				header('Location : ./user');
 			}
 		}
 		

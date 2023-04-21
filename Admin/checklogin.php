@@ -26,7 +26,7 @@
 		
 		if(mysqli_num_rows($query)==0){
 			$_SESSION['msg'] = "Login Failed, Invalid Input!";
-			header('location: index.php');
+			header('location: login.php');
 		}
 		else{
 			

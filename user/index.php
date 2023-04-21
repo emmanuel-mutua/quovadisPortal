@@ -2,6 +2,7 @@
 <?php
 //include auth_session.php file on all user panel pages
 include("auth_session.php");
+include('./data.php')
 ?>
 
 <!DOCTYPE html>
@@ -11,12 +12,12 @@ include("auth_session.php");
 <meta http-equiv="X-UA-Compatible" content="IE-edge">
 <meta name="viewport" content="width=device-width, intial-scale=1.0">
 <title>QUO VADIS YOUTH HUB JOB PLACEMENT</title>
-<link rel="stylesheet" href="css/style.css"/>
+<link rel="stylesheet" href="../css/style.css"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="./css/loading.css">
+  <link rel="stylesheet" href="../css/loading.css">
 <!--fav-icon-->
-<link rel="shortcut icon" href="images/Log 1.png"/>
-<link rel="stylesheet" href="css/fullstyle.css">
+<link rel="shortcut icon" href="../images/Log 1.png"/>
+<link rel="stylesheet" href="../css/fullstyle.css">
 </head>
 <div id="loading-page">
     <div class="loading-icon">
@@ -28,32 +29,16 @@ include("auth_session.php");
       document.getElementById("loading-page").style.display = "none";
     }, 2000); // 2 seconds
   </script>
-<script>
-        document.addEventListener("DOMContentLoaded", function() {
-            var alertBox = document.createElement("div");
-            alertBox.innerHTML = "Success";
-            alertBox.style = "position: fixed; top: 10px; right: 10px; padding: 10px; background-color: #f2f2f2; border: 1px solid #ddd; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);";
-            document.body.appendChild(alertBox);
-
-            setTimeout(function() {
-                alertBox.style.display = "none";
-            }, 2000);
-        });
-
-    </script>
-
-            <a href="./index.html">SignOut</a>
-    
 
 
 
 <body id="main-body">
     
-    <section class="main" style="background-image: url(images/hero-bg.png);">
+    <section class="main" style="background-image: url(../images/hero-bg.png);">
         
         <nav>
             <a href="#" class="Logo">
-                <img src="images/LOGO.png" width="320px" />
+                <img src="../images/LOGO.png" width="320px" />
             </a>
             <input class="menu-btn" type="checkbox" id="menu-btn"/>
             <label class="menu-icon" for="menu-btn">
@@ -66,7 +51,7 @@ include("auth_session.php");
                 <li><a href="#">Available Jobs</a></li>
                 <li><a href="#">Career Guidance</a></li>
                 <li><a target="_blank" href="https://youthportal.tawk.help/">Help</a></li>
-                <li><a class="active" href = "./index.html" >Log Out</a></li>
+                <li><a class="active" href = "../index.html" >Log Out</a></li>
             </ul>
         </nav>
 
@@ -84,7 +69,7 @@ include("auth_session.php");
             </div>
             <!--img-->
             <div class="home-img" style="width: 500px;">
-                <img src="images/Post.png" width="500px" style="text-shadow: 20px 22px;"/>
+                <img src="../images/Post.png" width="500px" style="text-shadow: 20px 22px;"/>
                 <marquee width="100%" direction="left" onmouseover="this.stop();"
                 onmouseout="this.start();">
                     <a href="#" style="color: white;">Check our updates on a daily Basis, we will be updating our website for new vacances accross the country</a>
@@ -103,24 +88,58 @@ include("auth_session.php");
     </section>
     
     <!--services----------------------->
-    <section class="services" id = "services" >
-        <script>
-            fetch("index.html")
-  .then(response => response.text())
-  .then(html => {
-    const doc = new DOMParser().parseFromString(html, "text/html");
-    const div1 = doc.querySelector("#services");
-    // ... insert the content of services into your dashboard.php file
-    const newDiv = document.createElement("div");
-newDiv.innerHTML = div1.innerHTML;
-document.body.appendChild(newDiv);
-  });
-        </script>
-    
-    
+    <section class="services" id="services">
+        <!--heading----------->
+        <div class="services-heading">
+            <h2>OUR PROFESSIONAL SERVICES</h2>
+            <p>We mentor young people on career choices and give them a shouulder to lean on when searching for their dream job</p>
+        </div>
+        <!--box-container----------------->
+        <div class="box-container">
+            <!--box-1-------->
+            <div class="box">
+                <img src="images/cv.png">
+                <font>CV Writing Training</font>
+                <p>We give young people out of school or in their final year training on how best to write their CV and present it best to potential employers</p>
+                <!--btn--------->
+                <a href="#">Take the course today</a>
+            </div>
+            <!--box-2-------->
+            <div class="box">
+                <img src="images/link.png">
+                <font>Link Job Seekers with Employers</font>
+                <p>We link those who are seeking for a job with potential employers. You only need to give us your details to link you with best suit career job.</p>
+                <!--btn--------->
+                <a href="#">Lets connect</a>
+            </div>
+            <!--box-3-------->
+            <div class="box">
+                <img src="images/dig.png">
+                <font>Digital trainings</font>
+                <p>We train you on how to apply for online jobs and present your skills to potential employers. We also orient you to digital world</p>
+                <!--btn--------->
+                <a href="#">Learn more</a>
+            </div>
+            <!--box-4-------->
+            <div class="box">
+                <img src="images/career.png">
+                <font>Career day</font>
+          
+                <p>We host career day for the form four leavers where they learn on how best to choose their courses.</p>
+                <!--btn--------->
+                <a href="#">Apply Now</a>
+            </div>
+            <!--box-1-------->
+            
+        </div>
     </section>
+  
     
    
+    <!--footer------------->
+    <footer>
+        <p>Copyright (C) - 2023 | Developed By <a href="https://kush.lexdigital.in/">QUO VADIS YOUTH HUB </a> </p>
+    </footer>
     <script>
         // Get the modal
         var modal = document.getElementById('id01');
